@@ -1,0 +1,48 @@
+<!-- {% extends "base.html" %}
+
+{% block content %}
+<div id="score">Score: 0</div>
+
+<table>
+    {% for row in board %}
+    <tr>
+        {% for letter in row %}
+        <td>{{ letter }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<form id="word-form">
+    <input type="text" name="word" autocomplete="off" required>
+    <button>Submit</button>
+</form>
+<div id="result"></div>
+{% endblock %}
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ -->
+ {% extends "base.html" %}
+
+ {% block content %}
+ <div id="score">Score: 0</div>
+ 
+ <table>
+     {% for row in board %}
+     <tr>
+         {% for letter in row %}
+         <td>{{ letter }}</td>
+         {% endfor %}
+     </tr>
+     {% endfor %}
+ </table>
+ <form id="word-form">
+     <input type="text" name="word" autocomplete="off" required>
+     <button type="submit">Submit</button>
+ </form>
+ <div id="result"></div>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script src="{{ url_for('static', filename='app.js') }}"></script>
+ {% endblock %}
+ 
